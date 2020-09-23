@@ -1,4 +1,3 @@
-import java.awt.Point;
 
 public class Circle extends Shape {
     Point center;
@@ -17,9 +16,9 @@ public class Circle extends Shape {
     }
 
     @Override
-    public String center() {
-       // return center;
-        return "("+center.x+","+center.y+")";
+    public Point center() {
+       return center;
+        //return "("+center.x+","+center.y+")";
     }
 
     @Override

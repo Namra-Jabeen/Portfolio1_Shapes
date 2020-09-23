@@ -1,8 +1,8 @@
-import java.awt.Point;
+
 abstract class Shape {
 
     // A method that returns the center of the shape
-    public abstract String  center();
+    public abstract Point center();
     // A method that computes the area of the shape
     public abstract double area();
     // A method that returns the circumference of the shape

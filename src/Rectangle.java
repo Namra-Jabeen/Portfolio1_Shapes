@@ -1,4 +1,4 @@
-import java.awt.Point;
+
 public class Rectangle extends Shape {
     int x;
     int y;
@@ -23,10 +23,11 @@ public class Rectangle extends Shape {
 
 
     @Override
-    public String center() {
-        double x = Math.round(this.x+0.5*width);
-        double y = Math.round(this.y+0.5*height);
-        return "("+x+","+y+")";
+    public Point center() {
+        Point c = new Point();
+        c.x = Math.round(this.x+0.5*width);
+        c.y = Math.round(this.y+0.5*height);
+        return c;
     }
 
     @Override

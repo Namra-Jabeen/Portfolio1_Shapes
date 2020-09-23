@@ -1,4 +1,4 @@
-import java.awt.Point;
+
 
 public class Triangle extends Shape {
     public static Point A;
@@ -14,15 +14,15 @@ public class Triangle extends Shape {
 
     //Kind of unsure how to do this one. Help me
     @Override
-    public String center() {
+    public Point center() {
        Point c =  new Point();
-        c.x = (A.x+B.x+C.x)/3;
-        c.y = (A.y+B.y+C.y)/3;
-        return "("+c.x+","+c.y+")";
+        c.x = Math.round((A.x+B.x+C.x)/3);
+        c.y = Math.round((A.y+B.y+C.y)/3);
+        return c;
     }
 
     @Override
-    public double area() {
+    public  double area() {
 
         try {
             double AB = Point.distance(A.x, A.y, B.x, B.y);
