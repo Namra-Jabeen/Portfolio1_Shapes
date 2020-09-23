@@ -21,5 +21,7 @@ public class Main {
         System.out.println("Area of triangle is: "+triangle.area());
         System.out.println("Circumference of triangle is: "+triangle.circumference());
 
+        System.out.println("The euclidean distance between triangle and rectangle is: " + triangle.computeEuclideanDistance(rectangle));
+
     }
 }

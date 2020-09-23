@@ -1,4 +1,3 @@
-
 abstract class Shape {
 
     // A method that returns the center of the shape
@@ -12,5 +11,8 @@ abstract class Shape {
    // public double euclideanDistance(Shape shape) {
    // shape.center()
    // }
-
+    public double computeEuclideanDistance(Shape shape) {
+        Point point = new Point();
+        return point.distance(shape.center().x,shape.center().y,center().x,center().y);
+    }
 }
