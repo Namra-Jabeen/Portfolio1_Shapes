@@ -15,7 +15,7 @@ public class Triangle extends Shape {
         this.side3 = side3;
     }
 
-    //Kind of unsure how to do this one.
+    //Kind of unsure how to do this one. Help me
     @Override
     public String center() {
         return null;
