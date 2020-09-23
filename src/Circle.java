@@ -4,8 +4,6 @@ public class Circle extends Shape {
     Point center;
     double radius;
 
-
-
     //default circle constructor
 
     public Circle() {
