@@ -1,18 +1,17 @@
 
-
 public class Triangle extends Shape {
     public static Point A;
     public static Point B;
     public static Point C;
 
-
+    //Constructor for Triangle object.
     public Triangle(Point A, Point B, Point C) {
         this.A = A;
         this.B = B;
         this.C = C;
     }
 
-    //Kind of unsure how to do this one. Help me
+
     @Override
     public Point center() {
        Point c =  new Point();

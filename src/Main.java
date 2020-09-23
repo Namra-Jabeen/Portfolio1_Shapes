@@ -2,6 +2,7 @@
 public class Main {
 
     public static void main(String[] args) {
+        //Initialize objects
         Circle circle = new Circle(new Point(5,3),5.0);
         Rectangle rectangle = new Rectangle(0,0,30,50);
         Triangle triangle = new Triangle(new Point(2,3), new Point(6,5), new Point(6,1));
@@ -21,7 +22,8 @@ public class Main {
         System.out.println("Area of triangle is: "+triangle.area());
         System.out.println("Circumference of triangle is: "+triangle.circumference());
 
-        System.out.println("The euclidean distance between triangle and rectangle is: " + triangle.computeEuclideanDistance(rectangle));
+        //Testing the euclidean distance method
+        System.out.println("The euclidean distance between triangle and rectangle is: " + triangle.euclideanDistance(rectangle));
 
     }
 }

@@ -4,11 +4,11 @@ public class Circle extends Shape {
     double radius;
 
     //default circle constructor
-
     public Circle() {
         this.center= new Point(0,0);
         this.radius = 1.0;
     }
+
     //Constructor of Circle object
     public Circle(Point center, double radius) {
         this.center = center;
@@ -16,10 +16,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    public Point center() {
-       return center;
-        //return "("+center.x+","+center.y+")";
-    }
+    public Point center() { return center; }
 
     @Override
     public double area() {
