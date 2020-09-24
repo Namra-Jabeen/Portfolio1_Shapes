@@ -27,4 +27,9 @@ public class Circle extends Shape {
     public double circumference() {
         return Math.PI * 2 * radius;
     }
+
+    @Override
+    public boolean isWithin(Point point) {
+        return false;
+    }
 }

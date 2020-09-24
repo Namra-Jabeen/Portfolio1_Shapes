@@ -39,4 +39,9 @@ public class Rectangle extends Shape {
     public double circumference() {
         return 2*width+2*height;
     }
+
+    @Override
+    public boolean isWithin(Point point) {
+        return false;
+    }
 }
