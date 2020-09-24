@@ -2,10 +2,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        Circle circle = new Circle(new Point(1, 1), 5.0);
+        Circle circle = new Circle(new Point(10, 10), 5.0);
         Rectangle rectangle = new Rectangle(0, 0, 30, 50);
         Triangle triangle = new Triangle(new Point(1, 4), new Point(7, 8), new Point(7, 2));
-
+/*
         //Testing circle
         System.out.println("Center of circle is: " + circle.center().toString());
         System.out.println("Area of circle is: " + circle.area());
@@ -21,15 +21,26 @@ public class Main {
         System.out.println("Area of triangle is: " + triangle.area());
         System.out.println("Circumference of triangle is: " + triangle.circumference());
 
-        System.out.println("The euclidean distance between triangle and rectangle is: " + triangle.computeEuclideanDistance(rectangle));
+        System.out.println("The euclidean distance between triangle and rectangle is: " + triangle.euclideanDistance(rectangle));
         System.out.println();
-        System.out.println(inShape(triangle, new Point(2,2)));
+
+ */
+        Point point = new Point(5, 3);
+        System.out.println(circle.inCircle(point));
+        System.out.println(triangle.isInTriangle(point));
+        System.out.println(rectangle.inRectangle(point));
 
 
     }
-
+}
+/*
     //might be better to replace if statements with switch statement, but it did not work for now, so it was changed back
-    public static String inShape(Shape shape, Point point) {
+    public static String inShape(Point point) {
+
+
+
+
+
         //method to check whether a point is inside a given shape
         //for now it only checks one shape, based on their name
         //so if we use triangle as input, the method will check if the point is inside the triangle
@@ -65,7 +76,6 @@ public class Main {
                     }
 
             }
-                return "The point is not inside any shape!";
-    }
-}
+                return "The point is not inside any shape!";*/
+
 

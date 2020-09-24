@@ -39,38 +39,29 @@ public class Rectangle extends Shape {
         return 2*width+2*height;
     }
 
-
-    @Override
-    //shapeName is used to differ from the different shapes by their names
-    public String shapeName() {
-        return "Rectangle";
+    public String inRectangle(Point point) {
+            //in this if statement we check if the point is inside all corners of the rectangle
+            if(point.x >= getX() && point.y >= getY() && //bottom left corner
+                    point.x >= getX() && point.y <= (getY()+getHeight()) &&   //top left corner
+                    point.x <= (getX()+getWidth()) && point.y >= getY() &&    //bottom right corner
+                    point.x <= (getX()+getWidth()) && point.getY()<=(getY()+ getHeight()))  //top right corner
+            {
+                return "The point is inside the rectangle";
+            }
+            return "The point is not inside the rectangle";
     }
-    @Override
     public double getX() {
         return x;
     }
-    @Override
     public double getY() {
         return y;
     }
-    @Override
+
     public double getWidth() {
         return width;
     }
-    @Override
+
     public double getHeight() {
         return height;
-    }
-
-    @Override
-    //used in circle class
-    public double getRadius() {
-        return 2;
-    }
-
-    @Override
-    //for triangle class
-    public boolean isInTriangle(Point p) {
-        return false;
     }
 }

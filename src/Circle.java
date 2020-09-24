@@ -15,6 +15,20 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    public String inCircle(Point point) {
+        if (point.x <= (getX() + getRadius()) && point.x >= (getX() - getRadius())
+                //here we check if the x of our point is inside the circle
+                //so once add the radius to the x from the center and once subtract it, and check
+                //if the x of the point is in between these two variables
+                && point.y <= (getY() + getRadius()) && point.y >= (getY() - getRadius())) {
+            //here we check if the y of our point is inside the circle
+            //so we once add the radius to the y from the center and once subtract it, and check
+            //if the y of the point is in between these two variables
+            return "The point is inside the circle";
+        }
+        return "The point is not inside the circle";
+    }
+
     @Override
     public Point center() {
        return center;
@@ -31,37 +45,16 @@ public class Circle extends Shape {
         return Math.PI * 2 * radius;
     }
 
-
-    @Override
-    //shapeName is used to differ from the different shapes
-    public String shapeName() {
-        return "Circle";
-    }
-    @Override
     public double getX() {
         return center.x;
     }
-    @Override
+
     public double getY() {
     return center.y;
     }
-    @Override
+
     public double getRadius() {
         return radius;
     }
 
-    //rest of methods not for use in this class
-    @Override
-    public double getWidth() {
-        return 1;
-    }
-    @Override
-    public double getHeight() {
-        return 2;
-    }
-
-    @Override
-    public boolean isInTriangle(Point p) {
-        return false;
-    }
 }
