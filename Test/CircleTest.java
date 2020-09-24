@@ -3,21 +3,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CircleTest {
-
-    @Test
-    void newCircleNoInput(){
-     Circle testCircle = new Circle();
-     assertEquals(new Point(0,0),testCircle.center);
-     assertEquals(1,testCircle.radius);
-    }
-
-    @Test
-    void newCircleWithInput() {
-        Circle testCircle = new Circle(new Point(3,3),6);
-        assertEquals(new Point(3,3),testCircle.center);
-        assertEquals(6,testCircle.radius);
-    }
-
     @Test
     void centerTest(){
         Circle testCircle = new Circle(new Point(3,3),6);

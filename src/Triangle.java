@@ -14,8 +14,8 @@ public class Triangle extends Shape {
     @Override
     public Point center() {
        Point c =  new Point();
-        c.x = Math.round((A.x+B.x+C.x)/3);
-        c.y = Math.round((A.y+B.y+C.y)/3);
+        c.x = (A.x+B.x+C.x)/3;
+        c.y = (A.y+B.y+C.y)/3;
         return c;
     }
 
