@@ -6,9 +6,10 @@ public class Circle extends Shape {
     //default circle constructor
 
     public Circle() {
-        this.center= new Point(0,0);
+        this.center = new Point(0, 0);
         this.radius = 1.0;
     }
+
     //Constructor of Circle object
     public Circle(Point center, double radius) {
         this.center = center;
@@ -17,7 +18,7 @@ public class Circle extends Shape {
 
     @Override
     public Point center() {
-       return center;
+        return center;
         //return "("+center.x+","+center.y+")";
     }
 
@@ -31,37 +32,18 @@ public class Circle extends Shape {
         return Math.PI * 2 * radius;
     }
 
-
     @Override
-    //shapeName is used to differ from the different shapes
-    public String shapeName() {
-        return "Circle";
-    }
-    @Override
-    public double getX() {
-        return center.x;
-    }
-    @Override
-    public double getY() {
-    return center.y;
-    }
-    @Override
-    public double getRadius() {
-        return radius;
-    }
-
-    //rest of methods not for use in this class
-    @Override
-    public double getWidth() {
-        return 1;
-    }
-    @Override
-    public double getHeight() {
-        return 2;
-    }
-
-    @Override
-    public boolean isInTriangle(Point p) {
+    public boolean isWithin(Point p) {
+        if (p.x <= (center.x + radius) && p.x >= (center.x - radius)
+                //here we check if the x of our point is inside the circle
+                //so once add the radius to the x from the center and once subtract it, and check
+                //if the x of the point is in between these two variables
+                && p.y <= (center.y + radius) && p.y >= (center.y - radius)) {
+            //here we check if the y of our point is inside the circle
+            //so we once add the radius to the y from the center and once subtract it, and check
+            //if the y of the point is in between these two variables
+            return true;
+        }
         return false;
     }
 }

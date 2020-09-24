@@ -15,7 +15,7 @@ public class Rectangle extends Shape {
 
     public Rectangle(int x, int y, double width, double height) {
         //x and why are the coordinates to the lower left corner of the rectangle.
-        this.x= x;
+        this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
@@ -24,53 +24,30 @@ public class Rectangle extends Shape {
     @Override
     public Point center() {
         Point c = new Point();
-        c.x = Math.round(this.x+0.5*width);
-        c.y = Math.round(this.y+0.5*height);
+        c.x = Math.round(this.x + 0.5 * width);
+        c.y = Math.round(this.y + 0.5 * height);
         return c;
     }
 
     @Override
     public double area() {
-        return width*height;
+        return width * height;
     }
 
     @Override
     public double circumference() {
-        return 2*width+2*height;
-    }
-
-
-    @Override
-    //shapeName is used to differ from the different shapes by their names
-    public String shapeName() {
-        return "Rectangle";
-    }
-    @Override
-    public double getX() {
-        return x;
-    }
-    @Override
-    public double getY() {
-        return y;
-    }
-    @Override
-    public double getWidth() {
-        return width;
-    }
-    @Override
-    public double getHeight() {
-        return height;
+        return 2 * width + 2 * height;
     }
 
     @Override
-    //used in circle class
-    public double getRadius() {
-        return 2;
-    }
-
-    @Override
-    //for triangle class
-    public boolean isInTriangle(Point p) {
+    public boolean isWithin(Point p) {
+        if (p.x >= x && p.y >= y && //bottom left corner
+                p.x >= x && p.y <= (y + height) &&   //top left corner
+                p.x <= (x + width) && p.y >= y &&    //bottom right corner
+                p.x <= (x + width) && p.y <= (y + height))  //top right corner
+        {
+            return true;
+        }
         return false;
     }
 }

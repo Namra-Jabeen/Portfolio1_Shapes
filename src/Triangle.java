@@ -19,9 +19,6 @@ public class Triangle extends Shape {
         return c;
     }
 
-
-
-
     //Random comment
     @Override
     public double circumference() {
@@ -46,7 +43,7 @@ public class Triangle extends Shape {
 
     }
     @Override
-    public boolean isInTriangle(Point p) {
+    public boolean isWithin(Point p) {
         //In order to find out whether a point is in the triangle,
         // we take the area of the triangle and
         // compare it to the areas of the point with two of the twos from the triangle
@@ -59,31 +56,5 @@ public class Triangle extends Shape {
         //returns true if correct, else returns false
         return newArea == ans;
     }
-    //shapeName is used to differ from the different shapes
-    @Override
-    public String shapeName() {
-        return "Triangle";
-    }
-    //methods we need for other classes, that's why they just return random integers
-    //we might need to find a way so that we can get rid of them
-    @Override
-    public double getX(){
-        return 4;
-    }
-    @Override
-    public double getY() {
-        return 3;
-    }
-    @Override
-    public double getWidth() {
-        return 1;
-    }
-    @Override
-    public double getHeight() {
-        return 2;
-    }
-    @Override
-    public double getRadius() {
-        return 4;
-    }
+
 }
