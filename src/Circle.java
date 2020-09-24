@@ -4,7 +4,6 @@ public class Circle extends Shape {
     double radius;
 
     //default circle constructor
-
     public Circle() {
         this.center = new Point(0, 0);
         this.radius = 1.0;
