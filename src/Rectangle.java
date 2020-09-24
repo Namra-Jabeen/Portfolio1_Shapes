@@ -21,7 +21,6 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
-
     @Override
     public Point center() {
         Point c = new Point();
@@ -38,5 +37,40 @@ public class Rectangle extends Shape {
     @Override
     public double circumference() {
         return 2*width+2*height;
+    }
+
+
+    @Override
+    //shapeName is used to differ from the different shapes by their names
+    public String shapeName() {
+        return "Rectangle";
+    }
+    @Override
+    public double getX() {
+        return x;
+    }
+    @Override
+    public double getY() {
+        return y;
+    }
+    @Override
+    public double getWidth() {
+        return width;
+    }
+    @Override
+    public double getHeight() {
+        return height;
+    }
+
+    @Override
+    //used in circle class
+    public double getRadius() {
+        return 2;
+    }
+
+    @Override
+    //for triangle class
+    public boolean isInTriangle(Point p) {
+        return false;
     }
 }

@@ -1,5 +1,3 @@
-
-
 public class Triangle extends Shape {
     public static Point A;
     public static Point B;
@@ -21,20 +19,9 @@ public class Triangle extends Shape {
         return c;
     }
 
-    @Override
-    public  double area() {
 
-        try {
-            double AB = Point.distance(A.x, A.y, B.x, B.y);
-            double BC = Point.distance(C.x, C.y, B.x, B.y);
-            double AC = Point.distance(A.x, A.y, C.x, C.y);
-            double p = (AB+BC+AC)/2;
-            return Math.sqrt(p*(p-AC)*(p-BC)*(p-AB));
-        } catch (Exception e) {
-            throw new NullPointerException(e.getMessage());
-        }
 
-    }
+
     //Random comment
     @Override
     public double circumference() {
@@ -46,6 +33,57 @@ public class Triangle extends Shape {
         } catch (Exception e) {
             throw new NullPointerException(e.getMessage());
         }
+    }
 
+    @Override
+    public  double area() {
+        return Math.abs((A.x*(B.y-C.y)+B.x*(C.y - A.y)+C.x*(A.y-B.y))/2.0);
+    }
+
+    //We overload the the previous area method, which is used in our isInTriangle method
+    public  double area(Point one, Point two, Point three) {
+        return Math.abs((one.x*(two.y-three.y)+two.x*(three.y - one.y)+three.x*(one.y-two.y))/2.0);
+
+    }
+    @Override
+    public boolean isInTriangle(Point p) {
+        //In order to find out whether a point is in the triangle,
+        // we take the area of the triangle and
+        // compare it to the areas of the point with two of the twos from the triangle
+        double ans = area(A,B,C);
+        double ans1=area(p,B,C);
+        double ans2=area(p,A,B);
+        double ans3=area(p,A,C);
+        double newArea = ans1+ans2+ans3;
+
+        //returns true if correct, else returns false
+        return newArea == ans;
+    }
+    //shapeName is used to differ from the different shapes
+    @Override
+    public String shapeName() {
+        return "Triangle";
+    }
+    //methods we need for other classes, that's why they just return random integers
+    //we might need to find a way so that we can get rid of them
+    @Override
+    public double getX(){
+        return 4;
+    }
+    @Override
+    public double getY() {
+        return 3;
+    }
+    @Override
+    public double getWidth() {
+        return 1;
+    }
+    @Override
+    public double getHeight() {
+        return 2;
+    }
+    @Override
+    public double getRadius() {
+        return 4;
     }
 }
