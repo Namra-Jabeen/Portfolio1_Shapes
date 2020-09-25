@@ -37,7 +37,7 @@ public class Triangle extends Shape {
     }
 
     //We overload the the previous area method, which is used in our isInTriangle method
-    public  double area(Point one, Point two, Point three) {
+    private  double area(Point one, Point two, Point three) {
         return Math.abs((one.x*(two.y-three.y)+two.x*(three.y - one.y)+three.x*(one.y-two.y))/2.0);
 
     }
