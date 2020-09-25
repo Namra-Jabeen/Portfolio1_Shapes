@@ -10,7 +10,6 @@ public class Triangle extends Shape {
         this.C = C;
     }
 
-    //Kind of unsure how to do this one. Help me
     @Override
     public Point center() {
        Point c =  new Point();
@@ -19,7 +18,6 @@ public class Triangle extends Shape {
         return c;
     }
 
-    //Random comment
     @Override
     public double circumference() {
         try {
