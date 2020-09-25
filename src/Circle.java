@@ -1,4 +1,3 @@
-
 public class Circle extends Shape {
     Point center;
     double radius;
@@ -18,7 +17,6 @@ public class Circle extends Shape {
     @Override
     public Point center() {
         return center;
-        //return "("+center.x+","+center.y+")";
     }
 
     @Override

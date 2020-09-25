@@ -3,6 +3,7 @@ public class Triangle extends Shape {
     public static Point B;
     public static Point C;
 
+    //remember to catch if the three points are on the same line
 
     public Triangle(Point A, Point B, Point C) {
         this.A = A;
@@ -10,7 +11,6 @@ public class Triangle extends Shape {
         this.C = C;
     }
 
-    //Kind of unsure how to do this one. Help me
     @Override
     public Point center() {
        Point c =  new Point();
@@ -19,7 +19,6 @@ public class Triangle extends Shape {
         return c;
     }
 
-    //Random comment
     @Override
     public double circumference() {
         try {
@@ -47,7 +46,7 @@ public class Triangle extends Shape {
         //In order to find out whether a point is in the triangle,
         // we take the area of the triangle and
         // compare it to the areas of the point with two of the twos from the triangle
-        double ans = area(A,B,C);
+        double ans = area();
         double ans1=area(p,B,C);
         double ans2=area(p,A,B);
         double ans3=area(p,A,C);

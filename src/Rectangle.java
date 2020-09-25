@@ -14,7 +14,7 @@ public class Rectangle extends Shape {
     }
 
     public Rectangle(int x, int y, double width, double height) {
-        //x and why are the coordinates to the lower left corner of the rectangle.
+        //x and y are the coordinates to the lower left corner of the rectangle.
         this.x = x;
         this.y = y;
         this.width = width;
@@ -23,6 +23,7 @@ public class Rectangle extends Shape {
 
     @Override
     public Point center() {
+        //Write with decimals not an integer
         Point c = new Point();
         c.x = Math.round(this.x + 0.5 * width);
         c.y = Math.round(this.y + 0.5 * height);

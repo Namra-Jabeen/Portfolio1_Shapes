@@ -6,7 +6,7 @@ class RectangleTest {
     void centerTest(){
         Rectangle testRectangle = new Rectangle(4,4,4,4);
         Point point = new Point(6.0,6.0);
-        assertEquals(point,testRectangle.center());
+        assertEquals(point.toString(),testRectangle.center().toString());
     }
 
     @Test

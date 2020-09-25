@@ -6,7 +6,7 @@ class CircleTest {
     @Test
     void centerTest(){
         Circle testCircle = new Circle(new Point(3,3),6);
-        assertEquals(new Point(3,3),testCircle.center());
+        assertEquals(new Point(3,3).toString(),testCircle.center().toString());
     }
 
     @Test
