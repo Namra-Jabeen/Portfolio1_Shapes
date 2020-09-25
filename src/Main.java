@@ -3,7 +3,7 @@ public class Main {
 
     public static void main(String[] args) {
         Circle circle = new Circle(new Point(1, 1), 5.0);
-        Rectangle rectangle = new Rectangle(0, 0, 30, 50);
+        Rectangle rectangle = new Rectangle(new Point(0,0), 30, 50);
         Triangle triangle = new Triangle(new Point(1, 4), new Point(7, 8), new Point(7, 2));
 
         //Testing circle

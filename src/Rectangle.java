@@ -1,22 +1,18 @@
-
 public class Rectangle extends Shape {
-    int x;
-    int y;
+    Point coordinate;
     double width;
     double height;
 
 
     public Rectangle() {
-        x = 0;
-        y = 0;
+        coordinate = new Point(0,0);
         width = 1;
         height = 1;
     }
 
-    public Rectangle(int x, int y, double width, double height) {
+    public Rectangle(Point coordinate, double width, double height) {
         //x and y are the coordinates to the lower left corner of the rectangle.
-        this.x = x;
-        this.y = y;
+        this.coordinate = coordinate;
         this.width = width;
         this.height = height;
     }
@@ -25,8 +21,8 @@ public class Rectangle extends Shape {
     public Point center() {
         //Write with decimals not an integer
         Point c = new Point();
-        c.x = Math.round(this.x + 0.5 * width);
-        c.y = Math.round(this.y + 0.5 * height);
+        c.x = Math.round(this.coordinate.x + 0.5 * width);
+        c.y = Math.round(this.coordinate.y + 0.5 * height);
         return c;
     }
 
@@ -42,10 +38,10 @@ public class Rectangle extends Shape {
 
     @Override
     public boolean isWithin(Point p) {
-        if (p.x >= x && p.y >= y && //bottom left corner
-                p.x >= x && p.y <= (y + height) &&   //top left corner
-                p.x <= (x + width) && p.y >= y &&    //bottom right corner
-                p.x <= (x + width) && p.y <= (y + height))  //top right corner
+        if (p.x >= coordinate.x && p.y >= coordinate.y && //bottom left corner
+                p.x >= coordinate.x && p.y <= (coordinate.y + height) &&   //top left corner
+                p.x <= (coordinate.x + width) && p.y >= coordinate.y &&    //bottom right corner
+                p.x <= (coordinate.x + width) && p.y <= (coordinate.y + height))  //top right corner
         {
             return true;
         }
