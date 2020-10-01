@@ -3,8 +3,6 @@ public class Triangle extends Shape {
     public static Point B;
     public static Point C;
 
-    //remember to catch if the three points are on the same line
-
     public Triangle(Point A, Point B, Point C) {
         this.A = A;
         this.B = B;
@@ -36,7 +34,7 @@ public class Triangle extends Shape {
         return Math.abs((A.x*(B.y-C.y)+B.x*(C.y - A.y)+C.x*(A.y-B.y))/2.0);
     }
 
-    //We overload the the previous area method, which is used in our isInTriangle method
+    //We overload the previous area method, which is used in our isWithin method
     private  double area(Point one, Point two, Point three) {
         return Math.abs((one.x*(two.y-three.y)+two.x*(three.y - one.y)+three.x*(one.y-two.y))/2.0);
 

@@ -19,10 +19,9 @@ public class Rectangle extends Shape {
 
     @Override
     public Point center() {
-        //Write with decimals not an integer
         Point c = new Point();
-        c.x = Math.round(this.coordinate.x + 0.5 * width);
-        c.y = Math.round(this.coordinate.y + 0.5 * height);
+        c.x = this.coordinate.x + 0.5 * width;
+        c.y = this.coordinate.y + 0.5 * height;
         return c;
     }
 
